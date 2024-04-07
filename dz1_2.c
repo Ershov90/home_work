@@ -6,7 +6,7 @@ int main(void)
     printf ("   go\n");
     printf ("     to walk\n");
 	
-	return 0;
+    return 0;
 }
 
 
