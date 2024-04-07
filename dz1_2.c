@@ -2,13 +2,10 @@
 
 int main(void)
 {
-	printf ("   *\n"); 
-	printf ("  ***\n");
-	printf (" *****\n");
-	printf ("*******\n"); 
-	printf (" HHOHH\n"); 
-	printf (" ZZZZZ\n"); 
-
+	printf ("Let’s\n"); 
+    printf ("   go\n");
+	printf ("     to walk\n");
+	
 	return 0;
 }
 
