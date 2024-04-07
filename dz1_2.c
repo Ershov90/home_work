@@ -2,9 +2,9 @@
 
 int main(void)
 {
-	printf ("Let’s\n"); 
+    printf ("Let’s\n"); 
     printf ("   go\n");
-	printf ("     to walk\n");
+    printf ("     to walk\n");
 	
 	return 0;
 }
