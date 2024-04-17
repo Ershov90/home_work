@@ -11,7 +11,7 @@ int main()
     max = max> d ? max: d;
     max = max> e ? max: e;
     
-	printf("%d", max);
+    printf("%d", max);
     
     return 0;
     
