@@ -17,7 +17,6 @@ int main ()
       break;
     }
     a = a/10;
-    
   }
   
   if (count != 0)
