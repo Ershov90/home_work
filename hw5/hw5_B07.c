@@ -23,6 +23,7 @@ int main ()
      
      if (res == 1)
         break;
+    
      a /= 10;
   }
   
