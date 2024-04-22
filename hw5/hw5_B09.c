@@ -7,7 +7,7 @@ int main ()
   int a, b;
   scanf ("%d", &a);
   
-  for (int i = a; i >= 1; i=i/10)
+  for (int i = a; i >= 1; i = i/10)
   {
     b = i%10;
     if (b%2 != 0)
