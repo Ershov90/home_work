@@ -7,8 +7,12 @@ int read_file(LOG_t *log, char *file_name)
     {
         printf("File dont found\n");
         fclose(f_in);
-        return -1;
+        return 0;
     }
+    uint32_t count_r = 1000;
+    log->data_line = (DATA_t* ) malloc(sizeof(DATA_t)*count_r); // Выделение памяти для 1000 строк
+    if (log->data_line == NULL)
+        printf("Error memmory\n");
     log->cnt_line = 0;
     char line[50] = {0};
     uint32_t count = 1;
@@ -24,6 +28,11 @@ int read_file(LOG_t *log, char *file_name)
             printf("Error read logs line %d\n", count++);
         else
             count++, log->cnt_line++;
+        if (log->cnt_line >= count_r)                                   //Добавление памяти для 1000 строк
+            {
+                count_r += 1000;
+                log->data_line = (DATA_t*) realloc(log->data_line, sizeof(DATA_t)*count_r);
+            } 
     }
     fclose(f_in);
     return count;

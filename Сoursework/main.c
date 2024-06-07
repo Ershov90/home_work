@@ -35,12 +35,12 @@ int main(int argc, char *argv[])
             return 1;
         }
     }
-
-    if (read_file(&log_data, f_name))                           //Чтение файла с данными, если файл не был найде
+    if (read_file(&log_data, f_name) == 0)                      //Чтение файла с данными, если файл не был найде
         return -1;                                              //завершение программы
     if (month < 1 || month > 12)                                //Если номер месяц указан не верно или вообще не был указан 
         stat_year(&log_data);                                   //выводится общая статистика
     else                                                
         cur_month(&log_data, month);
+    free(log_data.data_line);
     return 0;
 }
